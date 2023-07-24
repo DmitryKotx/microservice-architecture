@@ -1,0 +1,5 @@
+# Project exclude paths
+/customer/target/
+docker-compose.yml
+/customer/src/main/resources/application.yml
+.idea
