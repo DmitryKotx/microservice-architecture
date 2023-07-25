@@ -1,4 +1,4 @@
-package ru.kotov.model;
+package ru.kotov.customer.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

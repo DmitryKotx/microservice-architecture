@@ -1,4 +1,4 @@
-package ru.kotov.request;
+package ru.kotov.customer.request;
 
 public record CustomerRegistrationRequest(
         String firstName,

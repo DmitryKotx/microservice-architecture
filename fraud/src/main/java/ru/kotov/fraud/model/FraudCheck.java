@@ -1,4 +1,4 @@
-package ru.kotov.fraud;
+package ru.kotov.fraud.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class FraudCheckHistory {
+public class FraudCheck {
     @Id
     @SequenceGenerator(
             name = "fraud_id_sequence",
