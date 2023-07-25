@@ -2,7 +2,6 @@ package ru.kotov.customer.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import ru.kotov.clients.fraud.FraudCheckResponse;
 import ru.kotov.clients.fraud.FraudClient;
 import ru.kotov.clients.notification.NotificationClient;
@@ -15,7 +14,6 @@ import ru.kotov.customer.request.CustomerRegistrationRequest;
 @AllArgsConstructor
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    private final RestTemplate restTemplate;
     private final FraudClient fraudClient;
     private final NotificationClient notificationClient;
 
