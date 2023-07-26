@@ -1,6 +1,16 @@
 spring:
   application:
     name: eureka-server
+  zipkin:
+    base-url: http://localhost:9411
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 server:
   port: 8761
 eureka:
