@@ -2,9 +2,9 @@ package ru.kotov.customer;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.kotov.amqp.RabbitMqMessageProducer;
 import ru.kotov.clients.fraud.FraudCheckResponse;
 import ru.kotov.clients.fraud.FraudClient;
-import ru.kotov.clients.notification.NotificationClient;
 import ru.kotov.clients.notification.NotificationRequest;
 
 @Service
@@ -12,7 +12,7 @@ import ru.kotov.clients.notification.NotificationRequest;
 public class CustomerService {
     private final CustomerRepository customerRepository;
     private final FraudClient fraudClient;
-    private final NotificationClient notificationClient;
+    private final RabbitMqMessageProducer rabbitMqMessageProducer;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()
@@ -26,12 +26,16 @@ public class CustomerService {
         if(fraudCheckResponse.isFraudster()) {
             throw new IllegalStateException("fraudster");
         }
-        notificationClient.sendNotification(
+        NotificationRequest notificationRequest =
                 new NotificationRequest(
                         customer.getId(),
                         customer.getEmail(),
                         String.format("Hi %s, welcome to hell...", customer.getFirstName())
-                )
+                );
+        rabbitMqMessageProducer.publish(
+                notificationRequest,
+                "internal.exchange",
+                "internal.notification.routing-key"
         );
     }
 }

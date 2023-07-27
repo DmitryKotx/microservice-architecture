@@ -16,17 +16,17 @@ public class NotificationApplication {
     public static void main(String[] args) {
         SpringApplication.run(NotificationApplication.class, args);
     }
-    @Bean
-    CommandLineRunner commandLineRunner(RabbitMqMessageProducer producer, NotificationConfig config) {
-        return args -> {
-            producer.publish(
-                    new Person("Dima", 20),
-                    config.getInternalExchange(),
-                    config.getInternalNotificationRoutingKey()
-            );
-        };
-    }
-     record Person(String name, Integer age){
-
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(RabbitMqMessageProducer producer, NotificationConfig config) {
+//        return args -> {
+//            producer.publish(
+//                    new Person("Dima", 20),
+//                    config.getInternalExchange(),
+//                    config.getInternalNotificationRoutingKey()
+//            );
+//        };
+//    }
+//     record Person(String name, Integer age){
+//
+//    }
 }

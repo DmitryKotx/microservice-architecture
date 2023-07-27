@@ -4,7 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = {
+                "ru.kotov.customer",
+                "ru.kotov.amqp"
+        }
+)
 @EnableFeignClients(
         basePackages = "ru.kotov.clients"
 )
