@@ -1,9 +1,7 @@
-package ru.kotov.fraud.service;
+package ru.kotov.fraud;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.kotov.fraud.model.FraudCheck;
-import ru.kotov.fraud.repository.FraudCheckRepository;
 
 import java.time.LocalDateTime;
 @Service

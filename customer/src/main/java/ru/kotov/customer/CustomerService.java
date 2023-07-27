@@ -1,4 +1,4 @@
-package ru.kotov.customer.service;
+package ru.kotov.customer;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -6,9 +6,6 @@ import ru.kotov.clients.fraud.FraudCheckResponse;
 import ru.kotov.clients.fraud.FraudClient;
 import ru.kotov.clients.notification.NotificationClient;
 import ru.kotov.clients.notification.NotificationRequest;
-import ru.kotov.customer.model.Customer;
-import ru.kotov.customer.repository.CustomerRepository;
-import ru.kotov.customer.request.CustomerRegistrationRequest;
 
 @Service
 @AllArgsConstructor

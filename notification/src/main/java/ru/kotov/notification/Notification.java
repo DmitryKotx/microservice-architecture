@@ -1,4 +1,4 @@
-package ru.kotov.notification.model;
+package ru.kotov.notification;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

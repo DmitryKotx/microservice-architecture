@@ -1,10 +1,10 @@
-package ru.kotov.fraud.controller;
+package ru.kotov.fraud;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import ru.kotov.clients.fraud.FraudCheckResponse;
-import ru.kotov.fraud.service.FraudCheckService;
+import ru.kotov.fraud.FraudCheckService;
 
 @Slf4j
 @RestController

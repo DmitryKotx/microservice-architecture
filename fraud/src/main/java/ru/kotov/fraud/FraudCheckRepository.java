@@ -1,8 +1,8 @@
-package ru.kotov.fraud.repository;
+package ru.kotov.fraud;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.kotov.fraud.model.FraudCheck;
+
 @Repository
 public interface FraudCheckRepository extends JpaRepository<FraudCheck, Integer> {
 

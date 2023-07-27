@@ -1,4 +1,4 @@
-package ru.kotov.customer.controller;
+package ru.kotov.customer;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.kotov.customer.service.CustomerService;
-import ru.kotov.customer.request.CustomerRegistrationRequest;
 
 @Slf4j
 @RestController

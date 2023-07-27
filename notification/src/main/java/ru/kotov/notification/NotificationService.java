@@ -1,10 +1,10 @@
-package ru.kotov.notification.service;
+package ru.kotov.notification;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.kotov.clients.notification.NotificationRequest;
-import ru.kotov.notification.model.Notification;
-import ru.kotov.notification.repository.NotificationRepository;
+import ru.kotov.notification.Notification;
+import ru.kotov.notification.NotificationRepository;
 
 import java.time.LocalDateTime;
 
