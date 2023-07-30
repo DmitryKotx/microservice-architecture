@@ -42,29 +42,29 @@ services:
       - "15672:15672"
     networks:
       - spring
-  eureka-server:
-    image: dkotx/eureka-server:latest
-    container_name: eureka-server
-    ports:
-      - "8761:8761"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-    depends_on:
-      - zipkin
-  apigw:
-    image: dkotx/apigw:latest
-    container_name: apigw
-    ports:
-      - "8083:8083"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    networks:
-      - spring
-    depends_on:
-      - zipkin
-      - eureka-server
+#  eureka-server:
+#    image: dkotx/eureka-server:latest
+#    container_name: eureka-server
+#    ports:
+#      - "8761:8761"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - spring
+#    depends_on:
+#      - zipkin
+#  apigw:
+#    image: dkotx/apigw:latest
+#    container_name: apigw
+#    ports:
+#      - "8083:8083"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=docker
+#    networks:
+#      - spring
+#    depends_on:
+#      - zipkin
+#      - eureka-server
   customer:
     image: dkotx/customer:latest
     container_name: customer
@@ -79,7 +79,6 @@ services:
       - zipkin
       - postgres
       - rabbitmq
-      - eureka-server
   fraud:
     image: dkotx/fraud:latest
     container_name: fraud
@@ -94,7 +93,6 @@ services:
       - zipkin
       - postgres
       - rabbitmq
-      - eureka-server
   notification:
     image: dkotx/notification:latest
     container_name: notification
@@ -109,7 +107,6 @@ services:
       - zipkin
       - postgres
       - rabbitmq
-      - eureka-server
 networks:
   postgres:
     driver: bridge
