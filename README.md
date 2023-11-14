@@ -4,7 +4,11 @@
 
 Архитектура проекта выглядит следующим образом:
 
-![image](https://github.com/DmitryKotx/microservice_architecture/assets/109358996/e82f036d-973d-43ac-a11c-72e4da04be2a)
+<p align="center">
+  <kbd>
+    <img src="https://github.com/DmitryKotx/microservice_architecture/assets/109358996/e82f036d-973d-43ac-a11c-72e4da04be2a"/>
+  </kbd>
+</p>
 
 Есть возможность запуска из среды разработки, также можно запускать микросервисы, используя docker.
 Частично реализована работа приложения с помощью kubernetes: сервисы postgres и rabbitmq запускаются и выполняют свои задачи, 
