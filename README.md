@@ -15,3 +15,10 @@
 однако zipkin не дает никакой полезной информации. Возможно, что имеется проблема с зависимостями.
 
 В будущем планируется полностью перенести микросервисы на kubernetes.
+
+### Стек:
+
+backend: Java, Spring Boot, Spring Data, Spring Cloud, Docker, RabbitMQ, Lombok
+database: PostgreSQL  
+IDE: IntelliJ IDEA
+build system: Maven  
