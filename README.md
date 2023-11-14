@@ -18,7 +18,7 @@
 
 ### Стек:
 
-backend: Java, Spring Boot, Spring Data, Spring Cloud, Docker, RabbitMQ, Lombok
+backend: Java, Spring Boot, Spring Data, Spring Cloud, Docker, RabbitMQ, Lombok  
 database: PostgreSQL  
-IDE: IntelliJ IDEA
-build system: Maven  
+IDE: IntelliJ IDEA  
+build system: Maven
